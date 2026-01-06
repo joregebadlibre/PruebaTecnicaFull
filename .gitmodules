@@ -1,0 +1,6 @@
+[submodule "PruebaTecnicaEnero2026Angular"]
+	path = PruebaTecnicaEnero2026Angular
+	url = https://github.com/joregebadlibre/PruebaTecnicaEnero2026Front.git
+[submodule "PruebaTecnicaEnero2026SprintBoot"]
+	path = PruebaTecnicaEnero2026SprintBoot
+	url = https://github.com/joregebadlibre/PruebaTecnicaEnero2026.git
