@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "0b7ebf5e-99e5-4787-b362-073d11c8c8a4",
+		"name": "PruebaTecnica API - Ejemplos (ejemplopostma)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25189169",
+		"_collection_link": "https://warped-water-24675.postman.co/workspace/PruebaTecnicaEnero2026~a65caf8b-58c4-40f3-ba0a-7bbd68188f36/collection/25189169-0b7ebf5e-99e5-4787-b362-073d11c8c8a4?action=share&source=collection_link&creator=25189169"
+	},
+	"item": [
+		{
+			"name": "Ejemplos (ejemplopostma)",
+			"item": [
+				{
+					"name": "1) Crear usuario - Jose Lema (POST /customers)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('customerIdJose', json.id); }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Jose Lema\",\n  \"gender\": \"M\",\n  \"age\": 30,\n  \"identification\": \"ID-JOSE-LEMA\",\n  \"address\": \"Otavalo sn y principal\",\n  \"phone\": \"098254785\",\n  \"password\": \"1234\",\n  \"active\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1) Crear usuario - Marianela Montalvo (POST /customers)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('customerIdMarianela', json.id); }"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Marianela Montalvo\",\n  \"gender\": \"F\",\n  \"age\": 28,\n  \"identification\": \"ID-MARIANELA-MONTALVO\",\n  \"address\": \"Amazonas y NNUU\",\n  \"phone\": \"097548965\",\n  \"password\": \"5678\",\n  \"active\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1) Crear usuario - Juan Osorio (POST /customers)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('customerIdJuan', json.id); }"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Juan Osorio\",\n  \"gender\": \"M\",\n  \"age\": 32,\n  \"identification\": \"ID-JUAN-OSORIO\",\n  \"address\": \"13 junio y Equinoccial\",\n  \"phone\": \"098874587\",\n  \"password\": \"1245\",\n  \"active\": true\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/customers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2) Crear cuenta 478758 (Jose) - AHORRO (POST /accounts)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('accountId478758', json.id); }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountNumber\": 478758,\n  \"accountType\": \"AHORRO\",\n  \"initialBalance\": 2000,\n  \"active\": true,\n  \"customerId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2) Crear cuenta 225487 (Marianela) - CORRIENTE (POST /accounts)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('accountId225487', json.id); }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountNumber\": 225487,\n  \"accountType\": \"CORRIENTE\",\n  \"initialBalance\": 100,\n  \"active\": true,\n  \"customerId\": 4\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2) Crear cuenta 495878 (Juan) - AHORRO (POST /accounts)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('accountId495878', json.id); }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountNumber\": 495878,\n  \"accountType\": \"AHORRO\",\n  \"initialBalance\": 0,\n  \"active\": true,\n  \"customerId\": 5\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2) Crear cuenta 496825 (Marianela) - AHORRO (POST /accounts)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('accountId496825', json.id); }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountNumber\": 496825,\n  \"accountType\": \"AHORRO\",\n  \"initialBalance\": 540,\n  \"active\": true,\n  \"customerId\": 4\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3) Crear cuenta 585545 (Jose) - CORRIENTE (POST /accounts)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('Status is 201', function () { pm.response.to.have.status(201); });",
+									"var json = pm.response.json();",
+									"if (json && json.id) { pm.collectionVariables.set('accountId585545', json.id); }"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountNumber\": 585545,\n  \"accountType\": \"CORRIENTE\",\n  \"initialBalance\": 1000,\n  \"active\": true,\n  \"customerId\": 3\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/accounts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4) Retiro de 575 (DEBITO) cuenta 478758 (POST /transactions)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 3,\n  \"transactionType\": \"DEBITO\",\n  \"amount\": 575\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4) Deposito de 600 (CREDITO) cuenta 225487 (POST /transactions)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 4,\n  \"transactionType\": \"CREDITO\",\n  \"amount\": 600\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4) Deposito de 150 (CREDITO) cuenta 495878 (POST /transactions)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 3,\n  \"transactionType\": \"CREDITO\",\n  \"amount\": 150\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4) Retiro de 540 (DEBITO) cuenta 496825 (POST /transactions)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 6,\n  \"transactionType\": \"DEBITO\",\n  \"amount\": 540\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "5) Reporte - Marianela (2022-02-08 a 2022-02-10) (GET /reports)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/reports?customerId=4&from=2022-02-08&to=2022-02-10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reports"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "4"
+								},
+								{
+									"key": "from",
+									"value": "2022-02-08"
+								},
+								{
+									"key": "to",
+									"value": "2022-02-10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "customerIdJose",
+			"value": ""
+		},
+		{
+			"key": "customerIdMarianela",
+			"value": ""
+		},
+		{
+			"key": "customerIdJuan",
+			"value": ""
+		},
+		{
+			"key": "accountId478758",
+			"value": ""
+		},
+		{
+			"key": "accountId225487",
+			"value": ""
+		},
+		{
+			"key": "accountId495878",
+			"value": ""
+		},
+		{
+			"key": "accountId496825",
+			"value": ""
+		},
+		{
+			"key": "accountId585545",
+			"value": ""
+		}
+	]
+}
