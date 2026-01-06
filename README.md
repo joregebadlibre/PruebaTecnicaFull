@@ -50,6 +50,41 @@ El despliegue recomendado es usando el `docker-compose.yml` de la **raíz** del 
 - **API**: `http://localhost:8080`
 - **Front**: `http://localhost:4000`
 
+## Clonar el repositorio (incluyendo submódulos)
+
+Este repositorio usa **Git submodules** para incluir:
+
+- `PruebaTecnicaEnero2026Angular` -> `https://github.com/joregebadlibre/PruebaTecnicaEnero2026Front.git`
+- `PruebaTecnicaEnero2026SprintBoot` -> `https://github.com/joregebadlibre/PruebaTecnicaEnero2026.git`
+
+### Opción A (recomendada): clonar con submódulos
+
+```bash
+git clone --recurse-submodules https://github.com/joregebadlibre/PruebaTecnicaFull.git
+```
+
+### Opción B: clonar normal y luego inicializar submódulos
+
+```bash
+git clone https://github.com/joregebadlibre/PruebaTecnicaFull.git
+cd PruebaTecnicaFull
+git submodule update --init --recursive
+```
+
+### Actualizar submódulos a la última versión remota
+
+```bash
+git submodule update --init --recursive --remote
+```
+
+Si el update mueve los submódulos a nuevos commits, registra el cambio en el repo padre:
+
+```bash
+git add PruebaTecnicaEnero2026Angular PruebaTecnicaEnero2026SprintBoot
+git commit -m "Update submodules"
+git push
+```
+
 ### Variables de entorno relevantes
 
 En el `docker-compose.yml` se definen:
