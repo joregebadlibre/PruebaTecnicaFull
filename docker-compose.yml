@@ -12,7 +12,7 @@ services:
 
   api:
     build:
-      context: ./PruebaTecnicaEnero2026
+      context: ./PruebaTecnicaEnero2026SprintBoot
     environment:
       DB_URL: jdbc:postgresql://db:5432/pruebatecnica
       DB_USERNAME: postgres
@@ -25,7 +25,7 @@ services:
 
   front:
     build:
-      context: ./PruebaTecnicaEnero2026Front/banco-front
+      context: ./PruebaTecnicaEnero2026Angular/banco-front
     environment:
       PORT: 4000
     ports:
