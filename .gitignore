@@ -1,0 +1,22 @@
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+.cache/
+
+# Java / Gradle / Spring
+build/
+.gradle/
+out/
+*.class
+
+# IntelliJ
+*.iml

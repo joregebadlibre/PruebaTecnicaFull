@@ -4,12 +4,12 @@ Repositorio con 2 proyectos (backend + frontend) y despliegue completo con Docke
 
 ## Proyectos
 
-### 1) Backend: `PruebaTecnicaEnero2026`
+### 1) Backend: `PruebaTecnicaEnero2026SprintBoot`
 
 - **Tecnología**: Java 17, Spring Boot 3, Spring Data JPA.
 - **Base de datos**: PostgreSQL.
 - **Puerto**: `8080`.
-- **Imagen/Build**: se construye desde `PruebaTecnicaEnero2026/Dockerfile`.
+- **Imagen/Build**: se construye desde `PruebaTecnicaEnero2026SprintBoot/Dockerfile`.
 
 #### Datos iniciales (seed)
 
@@ -25,11 +25,11 @@ Esto permite:
 - que Hibernate cree/actualice las tablas (`ddl-auto: update`)
 - y luego se carguen datos iniciales en Postgres.
 
-### 2) Frontend: `PruebaTecnicaEnero2026Front/banco-front`
+### 2) Frontend: `PruebaTecnicaEnero2026Angular/banco-front`
 
 - **Tecnología**: Angular.
 - **Puerto**: `4000`.
-- **Imagen/Build**: se construye desde `PruebaTecnicaEnero2026Front/banco-front/Dockerfile`.
+- **Imagen/Build**: se construye desde `PruebaTecnicaEnero2026Angular/banco-front/Dockerfile`.
 
 #### Configuración de URL de API
 
